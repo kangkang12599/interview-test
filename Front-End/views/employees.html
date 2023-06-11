@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <button type="button" class="btn btn-primary" ng-click="handleLoad()">Load Data</button>
+        </div>
+        <div class="col-12 mb-12" ng-show="error">
+            <div class="text-danger">{{ error }}</div>
+        </div>
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Age</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.department.designation }}</td>
+                    <td>{{ employee.age }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
